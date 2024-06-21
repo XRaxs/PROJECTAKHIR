@@ -16,31 +16,34 @@
         android:theme="@style/Theme.Sepic"
         tools:targetApi="31">
         <activity
-            android:name=".addRoom"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".UpdateItemRoomActivity"
+            android:name=".Activity.addRoom"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".Activity.UpdateItemRoomActivity"
             android:exported="false" />
         <activity
-            android:name=".PopUp"
+            android:name=".Activity.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfilActivity"
+            android:name=".Decoration.PopUp"
             android:exported="false" />
         <activity
-            android:name=".DetailActivityGenre"
+            android:name=".Activity.ProfilActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.DetailActivityGenre"
             android:exported="false" />
         <activity
-            android:name=".DetailActivityMusic"
+            android:name=".Activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".Activity.DetailActivityMusic"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

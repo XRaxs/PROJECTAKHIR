@@ -1,15 +1,11 @@
-package com.example.sepic
+package com.example.sepic.Activity
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.example.sepic.API.AppData
 import com.example.sepic.databinding.ActivityDetailGenreBinding
-import com.example.sepic.databinding.ActivityDetailMusicBinding
 
 class DetailActivityGenre : AppCompatActivity() {
     private lateinit var binding: ActivityDetailGenreBinding

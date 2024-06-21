@@ -1,6 +1,7 @@
-package com.example.sepic
+package com.example.sepic.Activity
 
 import android.content.Intent
+import android.database.sqlite.SQLiteConstraintException
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
@@ -9,18 +10,21 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.esafirm.imagepicker.features.ImagePickerConfig
 import com.esafirm.imagepicker.features.ImagePickerMode
 import com.esafirm.imagepicker.features.ReturnMode
 import com.esafirm.imagepicker.features.registerImagePicker
+import com.example.sepic.R
 import com.example.sepic.Room.ItemDatabase
 import com.example.sepic.Room.ItemViewModel
 import com.example.sepic.Room.ItemViewModelFactory
 import com.example.sepic.Utils.reduceFileImage
 import com.example.sepic.Utils.uriToFile
 import com.google.android.material.textfield.TextInputEditText
+import java.io.File
 
 class addRoom : AppCompatActivity() {
 
@@ -128,8 +132,18 @@ class addRoom : AppCompatActivity() {
 
         if (post != null) {
             postViewModel.insertItem(post)
-            Toast.makeText(this@addRoom, "Data successfully added", Toast.LENGTH_SHORT).show()
-            finish()
+            postViewModel.insertResult.observe(this, Observer { result ->
+                result.onSuccess {
+//                    Toast.makeText(this@addRoom, "Data successfully added", Toast.LENGTH_SHORT).show()
+                    finish()
+                }.onFailure {
+                    if (it is SQLiteConstraintException) {
+                        Toast.makeText(this@addRoom, "Data dengan top yang sama sudah ada!", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this@addRoom, "Failed to save data", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            })
         } else {
             Toast.makeText(this@addRoom, "Failed to save data", Toast.LENGTH_SHORT).show()
         }

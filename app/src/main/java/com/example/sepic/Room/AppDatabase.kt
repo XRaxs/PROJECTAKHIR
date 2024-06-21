@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 //mndeklarasikan  database dengan entitas ietmdatabase
-@Database(entities = [ItemDatabase::class], version = 2)
+@Database(entities = [ItemDatabase::class], version = 8)
 
 @TypeConverters(AppConverter::class)
 

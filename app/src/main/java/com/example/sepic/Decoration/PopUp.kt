@@ -1,4 +1,4 @@
-package com.example.sepic
+package com.example.sepic.Decoration
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,11 +9,11 @@ import android.widget.Button
 import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.sepic.R
 import com.example.sepic.Room.ItemDatabase
 import com.example.sepic.Room.ItemViewModel
 import com.example.sepic.Room.ItemViewModelFactory
-import com.example.sepic.UpdateItemRoomActivity
+import com.example.sepic.Activity.UpdateItemRoomActivity
+import com.example.sepic.R
 
 class PopUp(private val itemDatabase: ItemDatabase,  private val position: Int) : DialogFragment() {
 

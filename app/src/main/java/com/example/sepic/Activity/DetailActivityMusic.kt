@@ -1,4 +1,4 @@
-package com.example.sepic
+package com.example.sepic.Activity
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.example.sepic
+package com.example.sepic.Activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sepic.API.ViewModel
 import com.example.sepic.Adapter.AppDataAdapter
+import com.example.sepic.Decoration.HorizontalSpaceItemDecoration
+import com.example.sepic.R
 import com.google.android.material.imageview.ShapeableImageView
 
 class MainActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.sepic
+package com.example.sepic.Activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sepic.Adapter.ItemAdapterRoom
+import com.example.sepic.Decoration.PopUp
+import com.example.sepic.R
 import com.example.sepic.Room.ItemDatabase
 import com.example.sepic.Room.ItemViewModel
 import com.example.sepic.Room.ItemViewModelFactory

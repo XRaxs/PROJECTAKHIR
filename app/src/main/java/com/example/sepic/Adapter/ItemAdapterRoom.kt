@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sepic.DetailActivity
+import com.example.sepic.Activity.DetailActivity
 import com.example.sepic.R
 import com.example.sepic.Room.ItemDatabase
 import com.example.sepic.Room.ItemViewModel

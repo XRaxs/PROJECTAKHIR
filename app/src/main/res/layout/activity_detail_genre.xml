@@ -4,15 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivityMusic">
+    tools:context=".Activity.DetailActivityMusic"
+    android:background="@color/purpel_bg">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/backIconDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/icon_back_2"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/icon_back_white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,34 +32,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:fontFamily="@font/quicksand_bold"
+        android:fontFamily="@font/gelasio_bold"
         android:text="Genre"
-        android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textColor="@color/abu"
+        android:textSize="22dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageProfile"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:adjustViewBounds="true"
-        android:layout_marginTop="24dp"
+        android:layout_width="44dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="27dp"
         android:layout_marginEnd="22dp"
+        android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/imam"
+        android:src="@drawable/profill"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/CircularImageViewStyle"
-        app:strokeColor="#2E53E7"
+        app:strokeColor="#FFFFFF"
         app:strokeWidth="1dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +68,7 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/gambar"
             android:layout_width="200dp"
-            android:layout_height="202dp"
+            android:layout_height="201dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/ic_launcher_background" />
 
@@ -67,12 +78,12 @@
         android:id="@+id/deskripsi"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/poppins"
         android:justificationMode="inter_word"
         android:text="Creating a sustainable lifestyle is a meaningful journey and requires the active involvement of every individual. One practical step that can be taken is to understand the impact of every daily action on the environment and look for ways to reduce our ecological footprint. This can start from small decisions such as reducing the use of single-use plastics, choosing eco-friendly products, or recycling waste.
 The second step that can be taken is to adopt a more thoughtful consumption pattern. This involves choosing products that are durable and recyclable, and avoiding waste. Understanding the life cycle of products, from production to disposal, helps us make more conscious and sustainable choices. In addition, supporting manufacturers and brands that are committed to environmentally friendly production and distribution practices can also have a big impact."
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -83,10 +94,11 @@ The second step that can be taken is to adopt a more thoughtful consumption patt
         android:id="@+id/pencetus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="18dp"
-        android:fontFamily="@font/poppins"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/gelasio_bold"
         android:text="Nama Pencetus : "
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 

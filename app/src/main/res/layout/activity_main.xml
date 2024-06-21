@@ -3,103 +3,119 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/purpel_bg"
+    tools:context=".Activity.MainActivity">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:textColor="@color/white"
+        android:src="@drawable/logo_atas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/greeting_subtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/inter"
+        android:text="Music For Everyone"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/jockey_one"
+        android:text="GENRE MUSIK"
+        android:textSize="20sp"
+        android:textColor="@color/abu"
+        app:layout_constraintStart_toStartOf="@+id/greeting_subtext"
+        app:layout_constraintTop_toBottomOf="@+id/greeting_subtext" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="62dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="24dp"
+        android:adjustViewBounds="true"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profill"
+        app:layout_constraintBottom_toBottomOf="@+id/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.0"
+        app:shapeAppearanceOverlay="@style/CircularImageViewStyle"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="1dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_genre"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:paddingTop="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genre"
+        tools:listitem="@layout/item_genre"
+        tools:orientation="horizontal" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/background_main"
+        app:layout_constraintTop_toBottomOf="@+id/rv_genre" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/topSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/jockey_one"
+        android:text="TOP MUSIC"
+        android:textColor="@color/abu"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/genre"
+        app:layout_constraintTop_toBottomOf="@+id/rv_genre" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="460dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/topSong">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".BerandaActivity">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/greeting_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="22dp"
-                android:text="Halo, Nama Kamu"
-                android:fontFamily="@font/poppins_semibold"
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/greeting_subtext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/quicksand"
-                android:text="Walcome to this App!!"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="@+id/greeting_text"
-                app:layout_constraintTop_toBottomOf="@+id/greeting_text" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/rv_horizontal_places"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Genre"
-                app:layout_constraintStart_toStartOf="@+id/greeting_subtext"
-                app:layout_constraintTop_toBottomOf="@+id/greeting_subtext" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imageProfile"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="20dp"
-                android:src="@drawable/imam"
-                android:scaleType="centerCrop"
-                android:adjustViewBounds="true"
-                app:strokeColor="#2E53E7"
-                app:strokeWidth="1dp"
-                android:padding="1dp"
-                app:shapeAppearanceOverlay="@style/CircularImageViewStyle"
-                app:layout_constraintBottom_toBottomOf="@+id/greeting_text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/greeting_text" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_genre"
-                android:layout_width="0dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="12dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rv_horizontal_places"
-                tools:listitem="@layout/item_genre"
-                tools:orientation="horizontal" />
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/hotels"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Top Song"
-                app:layout_constraintStart_toStartOf="@+id/rv_horizontal_places"
-                app:layout_constraintTop_toBottomOf="@+id/rv_genre" />
-
+            android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_song"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="8dp"
                 android:paddingStart="23dp"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hotels"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:listitem="@layout/item_songs" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

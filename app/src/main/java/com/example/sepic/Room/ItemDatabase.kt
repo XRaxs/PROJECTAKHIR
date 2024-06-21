@@ -4,10 +4,11 @@ import android.os.Parcel
 import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 import java.io.File
 
-@Entity
+@Entity(indices = [Index(value = ["top"], unique = true)])
 data class ItemDatabase(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")

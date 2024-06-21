@@ -14,10 +14,10 @@ interface ItemDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertItem(itemDatabase: ItemDatabase)
 
-    @Query("SELECT * FROM ItemDatabase ORDER BY id ASC")
+    @Query("SELECT * FROM ItemDatabase ORDER BY top ASC")
     fun getAllItem() : LiveData<List<ItemDatabase>>
 
-    @Update
+    @Update(onConflict = OnConflictStrategy.IGNORE)
     fun updateItem(item: ItemDatabase)
 
     @Delete

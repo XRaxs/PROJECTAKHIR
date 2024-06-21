@@ -4,42 +4,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    >
+    android:background="@color/purpel_bg">
 
-    <ImageView
-        android:id="@+id/backIconDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="30dp"
-        android:src="@drawable/icon_back_2"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profileImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profill"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/background_main"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:orientation="vertical"
         android:padding="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/backIconDetail">
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/profileImage"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="54dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/imam"
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay" />
+        app:layout_constraintTop_toBottomOf="@+id/profileImage">
 
         <TextView
             android:id="@+id/profileName"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Nama : Kelompok 5"
-            android:textSize="20sp"
+            android:text="GROUP 5"
+            android:textColor="@color/abu"
+            android:fontFamily="@font/jockey_one"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
@@ -48,17 +48,41 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:justificationMode="inter_word"
+            android:fontFamily="@font/gelasio_bold"
             android:text="Description : \nKami Membuat aplikasi ini sebagai wujud kecintaan kami terhadap praktikum ini, dengan selesainya aplikasi ini, kami berharap kakak-kakak asprak dapat menghargai usaha kami. Terimakasih!!"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/dataLabel"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Kesukaan : "
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/dataLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAVORITE  : "
+                android:fontFamily="@font/jockey_one"
+                android:textColor="@color/abu"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_addPost"
+                android:layout_width="40dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="200dp"
+                android:onClick="toAddPost"
+                android:src="@drawable/buttonfloating"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+
+
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -72,12 +96,13 @@
                     android:id="@+id/rvData"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="5dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:listitem="@layout/item_songs" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -86,16 +111,17 @@
 
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_addPost"
-        android:onClick="toAddPost"
+    <ImageView
+        android:id="@+id/backIconDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/buttonfloating"
-        android:backgroundTint="@color/green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/icon_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

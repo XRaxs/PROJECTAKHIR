@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    android:layout_marginTop="10dp"
-    android:background="@color/grey"
+    android:background="@color/purpel_bg"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,21 +14,32 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
             android:id="@+id/imageView"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/icon_back_2"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/icon_back_white"
             android:onClick="toMain"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="57dp"
             android:text="New Post"
+            android:textColor="@color/abu"
+            android:fontFamily="@font/jockey_one"
             android:textSize="22dp"
-            android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -79,13 +89,14 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:text="Judul"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:fontFamily="@font/gelasio_bold"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/judul"
@@ -100,7 +111,10 @@
                 android:layout_height="50dp"
                 android:background="@drawable/rounded"
                 android:gravity="top"
+                android:fontFamily="@font/gelasio_bold"
                 android:hint="Masukkan Judul"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
                 android:inputType="textMultiLine"
                 android:minLines="4"
                 android:maxLines="4"/>
@@ -112,7 +126,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name Artist"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gelasio_bold"
             android:textStyle="bold"
             android:textSize="18dp"/>
 
@@ -129,8 +144,11 @@
                 android:layout_height="50dp"
                 android:background="@drawable/rounded"
                 android:gravity="top"
+                android:fontFamily="@font/gelasio_bold"
                 android:hint="Masukkan Name"
                 android:inputType="textMultiLine"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:minLines="4"
                 android:maxLines="4"/>
 
@@ -141,7 +159,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gelasio_bold"
             android:textStyle="bold"
             android:textSize="18dp"/>
 
@@ -155,10 +174,13 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/post_desc_edit"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="90dp"
                 android:background="@drawable/rounded"
                 android:gravity="top"
                 android:hint="Masukkan deskripsi"
+                android:fontFamily="@font/gelasio_bold"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
                 android:inputType="textMultiLine"
                 android:minLines="4"
                 android:maxLines="4"/>
@@ -170,7 +192,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Top"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gelasio_bold"
             android:textStyle="bold"
             android:textSize="18dp"/>
 
@@ -188,7 +211,10 @@
                 android:background="@drawable/rounded"
                 android:gravity="top"
                 android:hint="Masukkan Top"
+                android:fontFamily="@font/gelasio_bold"
                 android:inputType="textMultiLine"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:minLines="4"
                 android:maxLines="4"/>
 
@@ -203,7 +229,7 @@
         android:layout_height="50dp"
         android:text="Posting"
         android:textSize="18dp"
-        android:backgroundTint="@color/green"
+        android:backgroundTint="@color/abu"
         android:textColor="@color/black"
         android:textAllCaps="false"/>
 

@@ -4,19 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivityMusic">
+    tools:context=".Activity.DetailActivityMusic"
+    android:background="@color/purpel_bg">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
         android:layout_marginTop="15dp"
-        android:fontFamily="@font/quicksand_bold"
+        android:fontFamily="@font/jockey_one"
         android:text="#1"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="28dp"
-        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <ImageView
@@ -25,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/icon_back_2"
+        android:src="@drawable/icon_back_white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,14 +43,15 @@
         android:id="@+id/judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/quicksand_bold"
         android:text="Top Music"
-        android:textColor="@color/black"
+        app:fontFamily="@font/jockey_one"
+        android:textColor="@color/abu"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageProfile"
@@ -50,11 +61,11 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="22dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/imam"
+        android:src="@drawable/profill"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/CircularImageViewStyle"
-        app:strokeColor="#2E53E7"
+        app:strokeColor="#FFFFFF"
         app:strokeWidth="1dp" />
 
     <androidx.cardview.widget.CardView
@@ -85,7 +96,7 @@
         android:layout_marginTop="70dp"
         app:layout_constraintStart_toEndOf="@+id/cardView3"
         app:layout_constraintTop_toTopOf="@+id/cardView3"
-        app:srcCompat="@drawable/pengunjung" />
+        app:srcCompat="@drawable/pengunjung_white" />
 
     <TextView
         android:id="@+id/pendengar"
@@ -93,9 +104,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="-2dp"
         android:layout_marginStart="3dp"
-        android:fontFamily="@font/quicksand_medium"
+        android:fontFamily="@font/gelasio_bold"
         android:text="2Jt"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
@@ -109,7 +120,7 @@
         android:layout_marginTop="7dp"
         app:layout_constraintStart_toEndOf="@+id/cardView3"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/rating" />
+        app:srcCompat="@drawable/rating_white" />
 
     <TextView
         android:id="@+id/rating"
@@ -118,10 +129,10 @@
         android:layout_marginTop="-2dp"
         android:layout_marginEnd="28dp"
         android:layout_marginStart="1dp"
-        android:fontFamily="@font/quicksand_medium"
+        android:fontFamily="@font/gelasio_bold"
         android:text="5.0"
         android:textSize="10dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4" />
@@ -131,7 +142,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp"
-        android:fontFamily="@font/quicksand_medium"
+        android:fontFamily="@font/gelasio_bold"
+        android:textColor="@color/white"
         android:text="Pendengar"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintStart_toEndOf="@+id/cardView3"
@@ -142,7 +154,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/quicksand_medium"
+        android:fontFamily="@font/gelasio_bold"
+        android:textColor="@color/white"
         android:text="Rating"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
@@ -153,7 +166,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="4dp"
+        android:textColor="@color/white"
         android:text="penyanyi"
+        android:fontFamily="@font/gelasio_bold"
         app:layout_constraintStart_toEndOf="@+id/cardView3"
         app:layout_constraintTop_toTopOf="@+id/cardView3" />
 
@@ -161,22 +176,20 @@
         android:layout_width="wrap_content"
         android:layout_height="450dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/lirik"
-            android:layout_width="340dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:justificationMode="inter_word"
             android:text="Creating a sustainable lifestyle is a meaningful journey and requires the active involvement of every individual. One practical step that can be taken is to understand the impact of every daily action on the environment and look for ways to reduce our ecological footprint. This can start from small decisions such as reducing the use of single-use plastics, choosing eco-friendly products, or recycling waste.
 The second step that can be taken is to adopt a more thoughtful consumption pattern. This involves choosing products that are durable and recyclable, and avoiding waste. Understanding the life cycle of products, from production to disposal, helps us make more conscious and sustainable choices. In addition, supporting manufacturers and brands that are committed to environmentally friendly production and distribution practices can also have a big impact. "
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
@@ -188,7 +201,10 @@ The second step that can be taken is to adopt a more thoughtful consumption patt
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="12dp"
+        android:fontFamily="@font/gelasio_bold"
         android:text="Lirik"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 

@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.sepic.API.AppData
-import com.example.sepic.DetailActivityGenre
-import com.example.sepic.DetailActivityMusic
+import com.example.sepic.Activity.DetailActivityGenre
+import com.example.sepic.Activity.DetailActivityMusic
 import com.example.sepic.R
 import com.google.android.material.imageview.ShapeableImageView
 
@@ -56,7 +56,7 @@ class AppDataAdapter(private var dataList: List<AppData>, private val viewType: 
         when (holder) {
             is GenreViewHolder -> {
                 holder.name.text = data.name
-                holder.pencetus.text = "Pencetus: ${data.pencetus}"
+                holder.pencetus.text = data.pencetus
                 Glide.with(holder.itemView.context)
                     .load(data.genreImg)
                     .into(holder.genreImg)
