@@ -1,6 +1,6 @@
 package com.example.sepic
 
-import PopUp
+import com.example.sepic.PopUp
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle

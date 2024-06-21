@@ -32,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         genreRecyclerView.adapter = genreAdapter
         songRecyclerView.adapter = songAdapter
 
+        // Add ItemDecoration for spacing between genres
+        val spaceInPixels = resources.getDimensionPixelSize(R.dimen.genre_item_spacing)
+        genreRecyclerView.addItemDecoration(HorizontalSpaceItemDecoration(spaceInPixels))
+
         viewModel.genres.observe(this, Observer { genres ->
             genreAdapter.updateData(genres)
         })
